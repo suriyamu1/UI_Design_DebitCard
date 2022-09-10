@@ -1,0 +1,273 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300&display=swap'); //Dancing Script
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap'); //Changa
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');   //Inconsolata
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+header {
+    h2 {
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 3rem;
+    }
+}
+
+body {
+    background-color: #000;
+
+    .maincontainer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        perspective: 1000px;
+
+        .thecard {
+            position: absolute;
+            width: 510px;  //85px * 6
+            height: 324px; //54px * 6
+            transform-style: preserve-3d;
+            transition: transform 1s ease;
+            cursor: pointer;
+            border-radius: 15px;
+
+            .thefront {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                background-image: linear-gradient(to right top, #1700ab, #1700ab, #1700ab, #1700ab, #1700ab, #0b2ac0, #0045d3, #005de5, #008cff, #00b3ff, #00d4f5, #0cf2e3);
+                border-radius: 15px;
+                z-index: 1;  // to display over the map-image
+                padding: 2% 5%;
+
+                img {
+                    width: 100%;
+                    position: absolute;
+                    top: 15px;
+                    left: 0px;
+                    opacity: 0.35;
+                    z-index: -1;  //to avoid overlapping
+                }
+
+                .row1 {
+                    height: 20%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: right;
+
+                    .bankname {
+                        h3 {
+                            font-family: 'Dancing Script', cursive;
+                            color: darkblue;
+                            font-size: 1.7rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .row2 {
+                    display: flex;
+                    justify-content: left;
+                    height: 18%;
+                    padding-left: 5%;
+
+                    .chip-img {
+                        position: static;
+                        opacity: 1;
+                        width: 4rem;
+                    }
+                }
+
+                .row3 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    h1 {
+                        padding: 2% 0%;
+                        font-family: 'Changa', sans-serif;
+                        color: whitesmoke;
+                        letter-spacing: 0.25rem;
+                        word-spacing: 0.65rem;
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .row4 {
+                    display: flex;
+                    flex-direction: row;
+                    .left {
+                        width: 65%;
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 5%;
+                        padding-top: 5%;
+
+                        .validity {
+                            display: flex;
+                            flex-direction: row;
+
+                            .box {
+                                margin-right: 10%;
+                                // border: 1px solid white;
+                                h5 {
+                                    font-family: Helvetica, sans-serif;
+                                    color: black;
+                                    font-size: 0.8rem;
+                                    font-weight: 900;
+                                    font-family: 'Inconsolata', monospace;
+                                }
+                                h3 {
+                                    
+                                    color: white;
+                                    opacity: 0.85;
+                                    font-size: 1rem;
+                                    font-family: 'Changa', sans-serif;
+                                    letter-spacing: 0.25rem;
+                                    margin: 0;
+                                }
+                            }
+                        }
+
+                        .cardholdername {
+                            padding-top: 5%;
+                            h1 {
+                                font-family: 'Inconsolata', monospace;
+                                font-size: 1.2rem;
+                                font-weight: 900;
+                                color: black;
+                                letter-spacing: 0.3rem;
+                                word-spacing: 0.5rem;
+                            }
+                        }
+                    }
+                    .right {
+                        width: 35%;
+                        display: flex;
+                        justify-content: right;
+                        align-items: flex-end;
+
+                        img {
+                            margin-right: 2%;
+                            position: static;
+                            opacity: 1;
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+
+            .theback {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                background-image: linear-gradient(to left top, #1700ab, #1700ab, #1700ab, #1700ab, #1700ab, #0b2ac0, #0045d3, #005de5, #008cff, #00b3ff, #00d4f5, #0cf2e3);
+                transform: rotateY(180deg);
+                border-radius: 15px;
+                padding: 0% 0%;
+
+                .row1 {
+                    margin: 0% 4%;
+                    height: 5%;
+
+                    h5 {
+                        font-family: 'Inconsolata', monospace;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .blackbar {
+                    margin: 2% 0%;
+                    background-color: #222;
+                    color: #222;
+                    min-height: 25%;
+                }
+
+                .row3 {
+                    margin: 0% 4%;
+                    height: 15%;
+                    display: flex;
+                    .left_pattern {
+                        background-color: #ffffff;
+                        opacity: 1;
+                        background-image: linear-gradient(to right, #efefef, #efefef 12px, #ffffff 12px, #ffffff );
+                        background-size: 24px 100%;
+                        color: white;
+                        border: 1px solid #1700ab;
+                        border-right: 0px;
+                        width: 94%;
+                    }
+                    .right_cvv {
+                        background-color: white;
+                        width: 6%;
+                        height: 50%;
+                        opacity: 0.6;
+                        display: flex;
+                        align-self: center;
+
+                        h2 {
+                            text-align: left;
+                            color: black;
+                        }
+                    }
+                }
+
+                .row4 {
+                    h4 {
+                        font-family: 'Inconsolata', monospace;
+                        font-size: 0.7rem;
+                        margin: 3% 4%;
+                    }
+                }
+
+                .row5 {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0% 4%;
+                    padding-top: 10%;
+
+                    h2 {
+                        font-size: 0.6rem;
+                        font-weight: 900;
+                        letter-spacing: 0.2rem;
+                    }
+                }
+            }
+        }
+
+        .thecard:hover {
+            transform: rotateY(180deg);
+        }
+        
+    }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 11px;
+    }
+    body {
+        .maincontainer {
+            .thecard {
+                width: 340px;  //85px * 4
+                height: 216px; //54px * 4
+            } 
+        }
+    }
+}
+
+

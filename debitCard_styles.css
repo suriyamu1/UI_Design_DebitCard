@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Changa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+}
+
+header h2 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+body {
+  background-color: #000;
+}
+
+body .maincontainer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+body .maincontainer .thecard {
+  position: absolute;
+  width: 510px;
+  height: 324px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+body .maincontainer .thecard .thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#1700ab), color-stop(#1700ab), color-stop(#1700ab), color-stop(#1700ab), color-stop(#1700ab), color-stop(#0b2ac0), color-stop(#0045d3), color-stop(#005de5), color-stop(#008cff), color-stop(#00b3ff), color-stop(#00d4f5), to(#0cf2e3));
+  background-image: linear-gradient(to right top, #1700ab, #1700ab, #1700ab, #1700ab, #1700ab, #0b2ac0, #0045d3, #005de5, #008cff, #00b3ff, #00d4f5, #0cf2e3);
+  border-radius: 15px;
+  z-index: 1;
+  padding: 2% 5%;
+}
+
+body .maincontainer .thecard .thefront img {
+  width: 100%;
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  opacity: 0.35;
+  z-index: -1;
+}
+
+body .maincontainer .thecard .thefront .row1 {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+body .maincontainer .thecard .thefront .row1 .bankname h3 {
+  font-family: 'Dancing Script', cursive;
+  color: darkblue;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+body .maincontainer .thecard .thefront .row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  height: 18%;
+  padding-left: 5%;
+}
+
+body .maincontainer .thecard .thefront .row2 .chip-img {
+  position: static;
+  opacity: 1;
+  width: 4rem;
+}
+
+body .maincontainer .thecard .thefront .row3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .maincontainer .thecard .thefront .row3 h1 {
+  padding: 2% 0%;
+  font-family: 'Changa', sans-serif;
+  color: whitesmoke;
+  letter-spacing: 0.25rem;
+  word-spacing: 0.65rem;
+  font-size: 1.5rem;
+}
+
+body .maincontainer .thecard .thefront .row4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .maincontainer .thecard .thefront .row4 .left {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+body .maincontainer .thecard .thefront .row4 .left .validity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .maincontainer .thecard .thefront .row4 .left .validity .box {
+  margin-right: 10%;
+}
+
+body .maincontainer .thecard .thefront .row4 .left .validity .box h5 {
+  font-family: Helvetica, sans-serif;
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 900;
+  font-family: 'Inconsolata', monospace;
+}
+
+body .maincontainer .thecard .thefront .row4 .left .validity .box h3 {
+  color: white;
+  opacity: 0.85;
+  font-size: 1rem;
+  font-family: 'Changa', sans-serif;
+  letter-spacing: 0.25rem;
+  margin: 0;
+}
+
+body .maincontainer .thecard .thefront .row4 .left .cardholdername {
+  padding-top: 5%;
+}
+
+body .maincontainer .thecard .thefront .row4 .left .cardholdername h1 {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: black;
+  letter-spacing: 0.3rem;
+  word-spacing: 0.5rem;
+}
+
+body .maincontainer .thecard .thefront .row4 .right {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body .maincontainer .thecard .thefront .row4 .right img {
+  margin-right: 2%;
+  position: static;
+  opacity: 1;
+  width: 50px;
+}
+
+body .maincontainer .thecard .theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#1700ab), color-stop(#1700ab), color-stop(#1700ab), color-stop(#1700ab), color-stop(#1700ab), color-stop(#0b2ac0), color-stop(#0045d3), color-stop(#005de5), color-stop(#008cff), color-stop(#00b3ff), color-stop(#00d4f5), to(#0cf2e3));
+  background-image: linear-gradient(to left top, #1700ab, #1700ab, #1700ab, #1700ab, #1700ab, #0b2ac0, #0045d3, #005de5, #008cff, #00b3ff, #00d4f5, #0cf2e3);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  border-radius: 15px;
+  padding: 0% 0%;
+}
+
+body .maincontainer .thecard .theback .row1 {
+  margin: 0% 4%;
+  height: 5%;
+}
+
+body .maincontainer .thecard .theback .row1 h5 {
+  font-family: 'Inconsolata', monospace;
+  font-size: 0.8rem;
+}
+
+body .maincontainer .thecard .theback .blackbar {
+  margin: 2% 0%;
+  background-color: #222;
+  color: #222;
+  min-height: 25%;
+}
+
+body .maincontainer .thecard .theback .row3 {
+  margin: 0% 4%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .maincontainer .thecard .theback .row3 .left_pattern {
+  background-color: #ffffff;
+  opacity: 1;
+  background-image: linear-gradient(to right, #efefef, #efefef 12px, #ffffff 12px, #ffffff);
+  background-size: 24px 100%;
+  color: white;
+  border: 1px solid #1700ab;
+  border-right: 0px;
+  width: 94%;
+}
+
+body .maincontainer .thecard .theback .row3 .right_cvv {
+  background-color: white;
+  width: 6%;
+  height: 50%;
+  opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+body .maincontainer .thecard .theback .row3 .right_cvv h2 {
+  text-align: left;
+  color: black;
+}
+
+body .maincontainer .thecard .theback .row4 h4 {
+  font-family: 'Inconsolata', monospace;
+  font-size: 0.7rem;
+  margin: 3% 4%;
+}
+
+body .maincontainer .thecard .theback .row5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0% 4%;
+  padding-top: 10%;
+}
+
+body .maincontainer .thecard .theback .row5 h2 {
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+
+body .maincontainer .thecard:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 11px;
+  }
+  body .maincontainer .thecard {
+    width: 340px;
+    height: 216px;
+  }
+}
+/*# sourceMappingURL=debitCard_styles.css.map */
